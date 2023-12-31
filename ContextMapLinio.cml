@@ -29,8 +29,8 @@ ContextMap InsuranceContextMap {
 	InicioAutentificacion <- Usuario  
     GestionDePagos [SK] <-> [SK] ComercioOnline
 	PaymentGateway <-  GestionDePagos
-	GestionDeEnvios <- ComercioOnline
-	GestiondeContenido <- ComercioOnline
+	GestionDeEnvios [ACL] <- ComercioOnline
+	GestiondeContenido [ACL] <- ComercioOnline
 	OptimizadorDeMotoresDeBusqueda <- GestiondeContenido
 	SocialMediaIntegration <- GestiondeContenido
     ServicioDeGeocalizacion <- GestionDeEnvios
