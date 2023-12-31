@@ -23,11 +23,11 @@ ContextMap InsuranceContextMap {
 	/* Define the context relationships: */ 
 
 	GestionDeInventarios <- ComercioOnline
-	AtencionAlCliente <-> Usuario
-	GestionDePoliticasEmpresariales <-> AtencionAlCliente
+	AtencionAlCliente [SK] <-> [SK] Usuario
+	GestionDePoliticasEmpresariales [SK] <-> [SK] AtencionAlCliente
 	Usuario  <- ComercioOnline
 	InicioAutentificacion <- Usuario  
-    GestionDePagos <-> ComercioOnline
+    GestionDePagos [SK] <-> [SK] ComercioOnline
 	PaymentGateway <-  GestionDePagos
 	GestionDeEnvios <- ComercioOnline
 	GestiondeContenido <- ComercioOnline
